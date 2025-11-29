@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CYRIL | Portfolio</title>
+    <title>CYRIL| Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -449,7 +449,7 @@
                     { id: 'proj3', x: 700, y: 100, w: 200, h: 150, color: '#555', type: 'interact', label: 'FOOD DIST APP', msg: "Food Distribution App: Managing logistics. Press [SPACE] to view." },
                     // Path to other rooms
                     { id: 'home', x: 50, y: 300, w: 50, h: 100, color: '#222', type: 'portal', target: 'bedroom', spawnX: 270, spawnY: 300, label: 'HOME' },
-                    { id: 'boss_gate', x: 1000, y: 300, w: 100, h: 150, color: '#500', type: 'portal', target: 'boss', spawnX: 100, spawnY: 300, label: 'BOSS ZONE' },
+                    { id: 'boss_gate', x: 1000, y: 300, w: 100, h: 150, color: '#500', type: 'portal', target: 'boss', spawnX: 100, spawnY: 300, label: 'WIP ZONE' },
                     { id: 'shrine_gate', x: 500, y: 600, w: 100, h: 100, color: '#005', type: 'portal', target: 'shrine', spawnX: 300, spawnY: 450, label: 'SHRINE' },
                     // THE ORACLE NPC
                     { id: 'oracle', x: 600, y: 400, w: 60, h: 60, color: '#ffd700', type: 'interact', label: 'THE ORACLE', msg: "AI INTERFACE ONLINE." }
@@ -458,10 +458,10 @@
             },
             boss: {
                 width: 800, height: 600,
-                color: '#200',
+                color: '#222',
                 objects: [
-                    { id: 'boss', x: 300, y: 100, w: 200, h: 200, color: '#f00', type: 'interact', label: 'THE CAPSTONE', msg: "BOSS: 'I am the SaaS Platform! I have 99% Uptime!' (It's a really big project)." },
-                    { id: 'exit', x: 350, y: 500, w: 100, h: 50, color: '#444', type: 'portal', target: 'city', spawnX: 950, spawnY: 350, label: 'ESCAPE' }
+                    { id: 'boss', x: 300, y: 100, w: 200, h: 200, color: '#ffd700', type: 'interact', label: 'UNDER CONSTRUCTION', msg: "DEV: 'This area is under development. Greatness takes time!'" },
+                    { id: 'exit', x: 350, y: 500, w: 100, h: 50, color: '#444', type: 'portal', target: 'city', spawnX: 950, spawnY: 350, label: 'EXIT' }
                 ],
                 spawn: { x: 400, y: 450 }
             },
@@ -926,4 +926,3 @@
     </script>
 </body>
 </html>
-
