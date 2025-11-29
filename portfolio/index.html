@@ -377,19 +377,26 @@
         <div class="oracle-close" onclick="closeOracle()">[ CLOSE COMM LINK ]</div>
     </div>
 
-    <!-- Save Point / Contact -->
+    <!-- Save Point / Contact (UPDATED WITH TALLY.SO) -->
     <div id="contact-form-container">
         <div class="close-btn" onclick="closeContact()">X</div>
         <div class="save-menu">
             <div class="save-inner">
                 <div class="save-title">SAVE YOUR PROGRESS?</div>
-                <p style="text-align: center; color: #aaa; margin-bottom: 20px;">(Send me a message)</p>
-                <form onsubmit="event.preventDefault(); alert('Message sent to the void (demo)!'); closeContact();">
-                    <input type="text" placeholder="PLAYER NAME">
-                    <input type="email" placeholder="EMAIL FREQUENCY">
-                    <textarea rows="4" placeholder="MESSAGE DATA..."></textarea>
-                    <button class="btn" style="width: 100%; margin-top: 10px;">SAVE (SEND)</button>
-                </form>
+                <p style="text-align: center; color: #aaa; margin-bottom: 10px;">(Send me a message)</p>
+                
+                <!-- TALLY.SO EMBED -->
+                <iframe 
+                    src="https://tally.so/embed/2EjbRM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    width="100%" 
+                    height="350" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    title="Contact Form"
+                    style="background: transparent;">
+                </iframe>
+                
             </div>
         </div>
     </div>
