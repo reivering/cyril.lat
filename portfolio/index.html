@@ -839,12 +839,19 @@
                 ctx.strokeStyle = 'rgba(255,255,255,0.2)';
                 ctx.strokeRect(obj.x, obj.y, obj.w, obj.h);
 
-                // Label floating above
+                // Label floating above (ALWAYS ON NAME TAGS)
                 if (obj.label) {
-                    ctx.fillStyle = '#fff';
-                    ctx.font = '16px "Press Start 2P"';
+                    ctx.font = 'bold 16px "VT323"';
                     ctx.textAlign = 'center';
-                    // ctx.fillText(obj.label, obj.x + obj.w/2, obj.y - 10); // Cluttered
+                    
+                    // Background box for readability
+                    const textWidth = ctx.measureText(obj.label).width;
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+                    ctx.fillRect(obj.x + obj.w/2 - textWidth/2 - 4, obj.y - 25, textWidth + 8, 20);
+
+                    // Text
+                    ctx.fillStyle = '#fff';
+                    ctx.fillText(obj.label, obj.x + obj.w/2, obj.y - 12);
                 }
                 
                 // Specific Detail Drawing (Procedural Art)
@@ -935,12 +942,10 @@
             });
             if (near) {
                 const bounce = Math.sin(Date.now() / 200) * 5;
-                ctx.fillStyle = '#fff';
+                ctx.fillStyle = '#0aff00'; // Neon Green Arrow
                 ctx.font = '20px Arial';
                 ctx.textAlign = 'center';
-                ctx.fillText('▼', near.x + near.w/2, near.y - 20 + bounce);
-                ctx.font = '10px "Press Start 2P"';
-                ctx.fillText(near.label, near.x + near.w/2, near.y - 40 + bounce);
+                ctx.fillText('▼', near.x + near.w/2, near.y - 30 + bounce);
             }
 
             ctx.restore();
